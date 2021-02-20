@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+
+* {
+    background: black;
+    color: white;
+    font-family: 'Roboto Mono',
+        monospace;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50vh 35vh 10vh;
+}
+
+.logo {
+    grid-row: 1;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.rec {
+    width: 250px;
+    height: 225px;
+    left: 91px;
+    top: 143px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* .inCent {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    left: 151px;
+    top: 193px;
+    background: #171717;
+} */
+
+.inRec1 {
+    width: 123px;
+    height: 110px;
+    background: #66FF00;
+    border-radius: 15px 0px 0px 0px;
+}
+
+.inRec2 {
+    width: 123px;
+    height: 110px;
+    background: #AE0700;
+    border-radius: 0px 15px 0px 0px;
+}
+
+.inRec3 {
+    width: 123px;
+    height: 110px;
+    background: #FFFF00;
+    border-radius: 0px 0px 0px 15px;
+}
+
+.inRec4 {
+    width: 123px;
+    height: 110px;
+    background: #4169E1;
+    border-radius: 0px 0px 15px 0px;
+}
+
+.btn {
+    grid-row: 2;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-self: auto;
+}
+
+.btn button {
+    width: 8em;
+    height: 80px;
+    background: #b2022f;
+    border: black;
+    border-radius: 15px;
+    padding: 20px 24px;
+    color: #fdfdfd;
+    display: inline-block;
+    font: normal bold 24px/1 "Roboto Mono",
+        sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+button:hover {
+    color: #000000;
+    font-weight: bolder;
+    background-color: #FFFFFF;
+}
+
+.foot {
+    grid-row: 3;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+}
+
+.foot h1 {
+    padding-top: 6%;
+}

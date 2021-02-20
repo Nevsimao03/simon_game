@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+
+* {
+    background: black;
+    color: white;
+    font-family: 'Roboto Mono',
+        monospace;
+
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 35vh 50vh 10vh;
+    overflow: hidden;
+}
+
+.top {
+    grid-row: 1;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-areas: 'btnTime'
+        'btnScore';
+    grid-row-gap: 1.5rem;
+    justify-content: center;
+    align-self: center;
+}
+
+#btnTime {
+    width: 9rem;
+    height: 3rem;
+    background: #B2022F;
+    border: black;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: inline-block;
+    font: normal bold 24px/1 "Roboto Mono",
+        sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1.2rem;
+}
+
+#btnScore {
+    width: 9rem;
+    height: 3rem;
+    background: #B2022F;
+    border: black;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: inline-block;
+    font: normal bold 24px/1 "Roboto Mono",
+        sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1.1rem;
+}
+
+.game {
+    grid-row: 2;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+}
+
+.inGame {
+    width: 85%;
+    height: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+}
+
+/* .inCir {
+    align-self: center;
+    justify-self: center;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: white;
+} */
+
+.inRec1 {
+    background: #66FF00;
+    border-top-left-radius: 100%;
+}
+
+.inRec2 {
+    background: #AE0700;
+    border-top-right-radius: 100%;
+}
+
+.inRec3 {
+    background: #FFFF00;
+    border-bottom-left-radius: 100%;
+}
+
+.inRec4 {
+    background: #4169E1;
+    border-bottom-right-radius: 100%;
+}
+
+.foot {
+    grid-row: 3;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+}
+
+.foot h1 {
+    padding-top: 8%;
+}
+
+@media only screen and (min-width: 724px) {
+    .inGame {
+        max-width: 60%;
+        max-height: 60%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .inGame {
+        max-width: 40%;
+        max-height: 60%;
+    }
+}
+
+.click {
+    cursor: pointer;
+}
+
+.click:hover {
+    box-shadow: inset 0px 0px 0px 3px white;
+    box-sizing: border-box;
+}

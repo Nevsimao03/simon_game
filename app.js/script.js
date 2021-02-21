@@ -29,7 +29,6 @@ const lightUp = (click) => {
 		}, 1000);
 	});
 };
-console.log(lightUp()) //null
 
 //This callback function is so that when you click on a panel
 let canClick = false;

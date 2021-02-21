@@ -3,13 +3,12 @@ const topLeftRec = document.querySelector('.inRec1');
 const topRightRec = document.querySelector('.inRec2');
 const bottomLeftRec = document.querySelector('.inRec3');
 const bottomRightRec = document.querySelector('.inRec4');
-let click = [];
+
 //We get a random button
 const randomClick = () => {
 	const click = [topLeftRec, topRightRec, bottomLeftRec, bottomRightRec];
-	return click(Math.floor(Math.random() * click.length));
+	return Math.floor(Math.random() * click.length);
 };
-console.log(randomClick()) //undifined
 
 //Creating an array for the buttons
 const btnArr = [randomClick()];
@@ -21,17 +20,17 @@ const btnGuess = [...btnArr];
 //Using await to pouse the code on that line until the promise is true/done
 const lightUp = (click) => {
 	return new Promise((resolve) => {
-		click.className = ' active';
+		click.className = 'active';
 		setTimeout(() => {
-			click.className = click.className.replace(' active', '');
+			click.className = click.className.replace('active', '');
 			setTimeout(() => {
 				resolve();
 			}, 225);
 		}, 1000);
 	});
 };
+console.log(lightUp()) //null
 
-console.log(click) //null
 //This callback function is so that when you click on a panel
 let canClick = false;
 

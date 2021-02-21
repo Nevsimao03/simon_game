@@ -28,6 +28,10 @@
     align-self: center;
 }
 
+.active {
+    background: white;
+}
+
 #btnTime {
     width: 9rem;
     height: 3rem;

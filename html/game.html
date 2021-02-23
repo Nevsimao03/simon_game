@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon</title>
+    <link rel="stylesheet" href="/css/game-style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
+    <script defer src="/js/script.js"></script>
+</head>
+
+<body>
+    <audio src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" data-sound="red"></audio>
+    <audio src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" data-sound="green"></audio>
+    <audio src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" data-sound="blue"></audio>
+    <audio src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" data-sound="yellow"></audio>
+    <div class="main">
+        <div class="top">
+            <span id="btnTime">Time: 1:0</span>
+            <span id="btnScore">Score: 0</span>
+        </div>
+        <div class="game">
+            <div class="inGame">
+                <div onclick="wasClicked(event.currentTarget)" class="click inRec1"></div>
+                <div onclick="wasClicked(event.currentTarget)" class="click inRec2"></div>
+                <div onclick="wasClicked(event.currentTarget)" class="click inRec3"></div>
+                <div onclick="wasClicked(event.currentTarget)" class="click inRec4"></div>
+            </div>
+        </div>
+        <!-- <div class="inCir"></div> -->
+        <div class="foot">
+            <h1>@Nevsimao</h1>
+        </div>
+    </div>
+    <div class="gameOver hide"><a href="/html/game.html"><button>Try Again!</button></a></div>
+</body>
+
+</html>

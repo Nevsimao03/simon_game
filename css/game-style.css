@@ -28,9 +28,6 @@
     align-self: center;
 }
 
-.active {
-    background: white;
-}
 
 #btnTime {
     width: 9rem;
@@ -40,11 +37,11 @@
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     display: inline-block;
-    font: normal bold 24px/1 "Roboto Mono",
+    font: normal bold 22px/1 "Roboto Mono",
         sans-serif;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 1.2rem;
+    padding-top: 1.4rem;
 }
 
 #btnScore {
@@ -55,11 +52,11 @@
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     display: inline-block;
-    font: normal bold 24px/1 "Roboto Mono",
+    font: normal bold 22px/1 "Roboto Mono",
         sans-serif;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 1.1rem;
+    padding-top: 1.4rem;
 }
 
 .game {
@@ -109,6 +106,10 @@
     border-bottom-right-radius: 100%;
 }
 
+.itIsOn {
+    background-color: white;
+}
+
 .foot {
     grid-row: 3;
     grid-column: 1/4;
@@ -136,9 +137,39 @@
 
 .click {
     cursor: pointer;
+    display: inline-block;
 }
 
 .click:hover {
     box-shadow: inset 0px 0px 0px 3px white;
     box-sizing: border-box;
+}
+
+.hide {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    background: url(/img/think.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hide a, button{
+    text-decoration: none;
+    align-self: center;
+    color: white;
+    width: 9rem;
+    height: 3rem;
+    background: #B2022F;
+    border: black;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    font: normal bold 22px/1 "Roboto Mono",
+    sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+.hide button:hover {
+    background: black;
+    color:white;
 }

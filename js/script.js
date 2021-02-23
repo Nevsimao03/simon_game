@@ -4,23 +4,9 @@ const topRight = document.querySelector('.inRec2')
 const bottomLeft = document.querySelector('.inRec3')
 const bottomRight = document.querySelector('.inRec4')
 const countdown = document.querySelector('#btnTime')
-const score = document.querySelector('#btnScore')
+let score = document.querySelector('#btnScore')
 const gameOver = document.querySelector('.hide')
 const main = document.querySelector('.main')
-
-//Audio
-
-//Time
-// const startTime = 1
-// let time = startTime * 60
-
-// const updateCountdown = () => {
-// 	const minutes = Math.floor(time / 60)
-// 	let seconds = time % 60
-// 	countdown.innerHTML = `${minutes}: ${seconds}`
-// 	time--
-// }
-// setInterval(updateCountdown, 1000)
 
 //We get a random button
 const randomClick = () => {
@@ -50,22 +36,27 @@ const lightUp = (click) => {
 
 //This callback function is so that when you click on a panel
 let canClick = false
+let scoreNum = 0;
+let times = 100;
 
 const wasClicked = wasClicked => {
 	if (!canClick) return
 	const expectedGuess = cycleGuess.shift()
 	if (expectedGuess === wasClicked) {
+		//Score update
+		score.innerText = scoreNum++
 		if (cycleGuess.length === 0) {
 			//make a new game
 			cycle.push(randomClick())
 			cycleGuess = [...cycle]
 			lightOn()
 		}
-	} else {
+	} else if (expectedGuess <= wasClicked) {
 		//end the game
+		score.innerText = scoreNum--
+	} else {
 		main.style.display = 'none';
 		gameOver.style.display = 'grid';
-		// alert('Game Over!')
 	}
 }
 
@@ -74,8 +65,21 @@ const lightOn = async () => {
 	canClick = false
 	for (const click of cycle) {
 		await lightUp(click)
+		setInterval(updateCountdown, 1000)
 	}
 	canClick = true
+}
+
+// Time
+const startTime = 1
+let time = startTime * 60
+const updateCountdown = () => {
+	if (canClick = true) {
+		const minutes = Math.floor(time / 60)
+		let seconds = time % 60
+		countdown.innerHTML = `${minutes}: ${seconds}`
+		time--
+	}
 }
 
 lightOn()

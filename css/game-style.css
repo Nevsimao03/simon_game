@@ -42,7 +42,7 @@
 }
 
 
-#btnTime {
+.btnTime {
     width: 9rem;
     height: 3rem;
     background: #B2022F;
@@ -54,7 +54,13 @@
         sans-serif;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 1.4rem;
+    padding-top: 0.8rem;
+}
+#btnTime {
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    background: #B2022F;
+    border-radius: 15px;
 }
 
 .btnScore {

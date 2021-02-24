@@ -14,6 +14,37 @@ const randomClick = () => {
 	return click[Math.floor(Math.random() * click.length)]
 }
 
+//Timer
+let startTimer = (duration, display) => {
+	let timer = duration, minutes, seconds
+	setInterval(() => {
+		minutes = parseInt(timer / 60, 10)
+		seconds = parseInt(timer % 60, 10)
+
+		minutes = minutes < 10 ? '0' + minutes : minutes
+		seconds = seconds < 10 ? '0' + seconds : seconds
+
+		display.textContent = minutes + ':' + seconds
+
+		if (--timer < 0) {
+			timer = duration
+		}
+		setInterval(() => {
+			
+		}, 250);
+	}, 1000);
+}
+let onload = () => {
+	let fiveMinutes = 60 * 1
+	display = document.querySelector('#btnTime')
+	if (canClick = true) {
+		startTimer(fiveMinutes, display)
+	}
+	else {
+		clearInterval()
+	}
+}
+
 //Create an array for the random button
 const cycle = [randomClick()]
 
@@ -27,6 +58,7 @@ const lightUp = (click) => {
 		click.className += ' itIsOn'
 		setTimeout(() => {
 			click.className = click.className.replace(' itIsOn', '')
+			onload()
 			setTimeout(() => {
 				resolve()
 			}, 250)
@@ -65,21 +97,8 @@ const lightOn = async () => {
 	canClick = false
 	for (const click of cycle) {
 		await lightUp(click)
-		setInterval(updateCountdown, 1000)
 	}
 	canClick = true
-}
-
-// Time
-const startTime = 1
-let time = startTime * 60
-const updateCountdown = () => {
-	if (canClick = true) {
-		const minutes = Math.floor(time / 60)
-		let seconds = time % 60
-		countdown.innerHTML = `${minutes}: ${seconds}`
-		time--
-	}
 }
 
 lightOn()

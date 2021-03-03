@@ -34,16 +34,17 @@ let startTimer = (duration, display) => {
 		}, 250);
 	}, 1000);
 }
-let onload = () => {
-	let fiveMinutes = 60 * 1
-	display = document.querySelector('#btnTime')
-	if (canClick = true) {
-		startTimer(fiveMinutes, display)
-	}
-	else {
-		clearInterval()
-	}
-}
+//Broken Function, some weird I can't see (it starts and then just goes up and down)
+// let onload = () => {
+// 	let fiveMinutes = 60 * 1
+// 	display = document.querySelector('#btnTime')
+// 	if (canClick === true) {
+// 		startTimer(fiveMinutes, display)
+// 	}
+// 	else {
+// 		// clearInterval()
+// 	}
+// }
 
 //Create an array for the random button
 const cycle = [randomClick()]
@@ -52,7 +53,7 @@ const cycle = [randomClick()]
 let cycleGuess = [...cycle]
 
 //Function that makes a promise to turn the active button white when active by passing it a new class with the style of white background
-//Using await to pouse the code on that line until the promise is true/done
+//Using await to pause the code on that line until the promise is true/done
 const lightUp = (click) => {
 	return new Promise(resolve => {
 		click.className += ' itIsOn'

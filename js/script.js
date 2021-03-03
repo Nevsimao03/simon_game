@@ -15,34 +15,33 @@ const randomClick = () => {
 }
 
 //Timer
-let startTimer = (duration, display) => {
-	let timer = duration, minutes, seconds
-	setInterval(() => {
-		minutes = parseInt(timer / 60, 10)
-		seconds = parseInt(timer % 60, 10)
+// let startTimer = (duration, display) => {
+// 	let timer = duration, minutes, seconds
+// 	setInterval(() => {
+// 		minutes = parseInt(timer / 60, 10)
+// 		seconds = parseInt(timer % 60, 10)
 
-		minutes = minutes < 10 ? '0' + minutes : minutes
-		seconds = seconds < 10 ? '0' + seconds : seconds
+// 		minutes = minutes < 10 ? '0' + minutes : minutes
+// 		seconds = seconds < 10 ? '0' + seconds : seconds
 
-		display.textContent = minutes + ':' + seconds
+// 		display.textContent = minutes + ':' + seconds
 
-		if (--timer < 0) {
-			timer = duration
-		}
-		setInterval(() => {
+// 		if (--timer < 0) {
+// 			timer = duration
+// 		}
+// 		setInterval(() => {
 			
-		}, 250);
-	}, 1000);
-}
-//Broken Function, some weird I can't see (it starts and then just goes up and down)
+// 		}, 250);
+// 	}, 1000);
+// }
 // let onload = () => {
 // 	let fiveMinutes = 60 * 1
 // 	display = document.querySelector('#btnTime')
-// 	if (canClick === true) {
+// 	if (canClick = true) {
 // 		startTimer(fiveMinutes, display)
 // 	}
 // 	else {
-// 		// clearInterval()
+// 		clearInterval()
 // 	}
 // }
 
@@ -59,7 +58,6 @@ const lightUp = (click) => {
 		click.className += ' itIsOn'
 		setTimeout(() => {
 			click.className = click.className.replace(' itIsOn', '')
-			onload()
 			setTimeout(() => {
 				resolve()
 			}, 250)
